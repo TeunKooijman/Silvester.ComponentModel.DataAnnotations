@@ -5,6 +5,7 @@
     <Description>A library for recursively validating ValidationAttributes on complex objects.</Description>
     <Version>1.0.0</Version>
     <Authors>Teun Silvester Kooijman</Authors>
+    <RepositoryUrl>https://github.com/TeunKooijman/Silvester.ComponentModel.DataAnnotations.git</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

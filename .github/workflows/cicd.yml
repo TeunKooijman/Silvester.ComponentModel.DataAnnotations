@@ -16,6 +16,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
+        source-url: 
         dotnet-version: 3.1.101
     - name: Install dependencies
       run: dotnet restore
@@ -25,8 +26,10 @@ jobs:
       run: dotnet test --no-restore --verbosity normal
     - name: Package
       run: dotnet pack -c Release -o nuget-packages 
-    - name: Archive nupkg
+    - name: Archive
       uses: actions/upload-artifact@v1
       with:
         name: nuget-packages
         path: nuget-packages
+    - name: Push (NuGet)
+      run: dotnet nuget push ./nuget-packages/*.nupkg --skip-duplicate --no-symbols true -k ${{secrets.NUGET_ORG_API_KEY}} -s https://api.nuget.org/v3/index.json
