@@ -56,9 +56,9 @@ using Silvester.ComponentModel.DataAnnotations.DependencyInjection;
 
 public void ConfigureServices(IServiceCollection services)
 {
-	services.AddRecursiveValidator(options =>
+	services.AddRecursiveValidator((options, services) =>
 	{
-		options.ValidationNamingPolicy = new JsonNamingPolicyAdapter();
+		options.ValidationNamingPolicy = ActivatorUtilities.CreateInstance<JsonNamingPolicyAdapter>(services);;
 	});
 }
 ```
