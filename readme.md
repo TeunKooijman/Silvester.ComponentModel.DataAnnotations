@@ -28,28 +28,27 @@ public void ConfigureServices(IServiceCollection services)
 
 If you are using, for example, the new `System.Text.Json` (de)serialization packages (with it's corresponding `JsonSerializerOptions`), you could fairly easily integrate the naming policies using:
 ```
-using System.Text.Json;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Silvester.ComponentModel.DataAnnotations.DependencyInjection.Options;
 
 namespace Silvester.ComponentModel.DataAnnotations.Tests.DependencyInjectionTests
 {
-	public class JsonNamingPolicyAdapter : IValidationNamingPolicy
-	{
-		private IOptions<JsonSerializerOptions> Options { get; }
-		
-		public JsonNamingPolicyAdapter(IOptions<JsonSerializerOptions> options)
-		{
-			Options = options;
-		}
+    public class JsonNamingPolicyAdapter : IValidationNamingPolicy
+    {
+        private IOptions<JsonOptions> Options { get; }
 
-		public string ConvertName(string name)
-		{
-			return Options?.Value?.PropertyNamingPolicy?.ConvertName(name) ?? name;
-		}
-	}
+        public JsonNamingPolicyAdapter(IOptions<JsonOptions> options)
+        {
+            Options = options;
+        }
+
+        public string ConvertName(string name)
+        {
+            return Options?.Value?.JsonSerializerOptions?.PropertyNamingPolicy?.ConvertName(name) ?? name;
+        }
+    }
 }
-
 ...
 
 using Silvester.ComponentModel.DataAnnotations.DependencyInjection;
