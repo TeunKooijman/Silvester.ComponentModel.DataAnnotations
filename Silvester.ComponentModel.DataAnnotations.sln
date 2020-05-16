@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.ComponentModel.DataAnnotations.Tests", "Silvester.ComponentModel.DataAnnotations.Tests\Silvester.ComponentModel.DataAnnotations.Tests.csproj", "{EC8936AC-EBF3-470F-AB50-2EC828294090}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.ComponentModel.DataAnnotations", "Silvester.ComponentModel.DataAnnotations\Silvester.ComponentModel.DataAnnotations.csproj", "{A7501CAA-985B-4D0C-BAB5-B48EBCBFCAD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC8936AC-EBF3-470F-AB50-2EC828294090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8936AC-EBF3-470F-AB50-2EC828294090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8936AC-EBF3-470F-AB50-2EC828294090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8936AC-EBF3-470F-AB50-2EC828294090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7501CAA-985B-4D0C-BAB5-B48EBCBFCAD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7501CAA-985B-4D0C-BAB5-B48EBCBFCAD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7501CAA-985B-4D0C-BAB5-B48EBCBFCAD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7501CAA-985B-4D0C-BAB5-B48EBCBFCAD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7003FDC7-D213-45BA-A9D4-2F82E3DCEF19}
+	EndGlobalSection
+EndGlobal
