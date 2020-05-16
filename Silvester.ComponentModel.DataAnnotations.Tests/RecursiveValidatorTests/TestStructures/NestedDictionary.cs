@@ -5,7 +5,7 @@ namespace Silvester.ComponentModel.DataAnnotations.Tests.RecursiveValidatorTests
 {
     public class NestedDictionary<TKey>
     {
-        public static NestedDictionary<TKey> Valid<TKey>(TKey key)
+        public static NestedDictionary<TKey> Valid(TKey key)
         {
             return new NestedDictionary<TKey>
             {
@@ -26,7 +26,7 @@ namespace Silvester.ComponentModel.DataAnnotations.Tests.RecursiveValidatorTests
             };
         }
 
-        public static NestedDictionary<TKey> WithInvalidChild<TKey>(TKey key)
+        public static NestedDictionary<TKey> WithInvalidChild(TKey key)
         {
             return new NestedDictionary<TKey>
             {
