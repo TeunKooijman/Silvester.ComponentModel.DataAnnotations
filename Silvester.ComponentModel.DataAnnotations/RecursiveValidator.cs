@@ -13,7 +13,12 @@ namespace Silvester.ComponentModel.DataAnnotations
     public interface IRecursiveValidator
     {   
         /**
-         * <summary>Validates an instance of a class recursively. Here, recursively means any non-simple types, </summary>
+         *  <summary>
+         *      Validates an instance of a class recursively. Here, recursively means any child property with a non-simple type is recursed into and validated as well. 
+         *      This is done in a depth-first fashion. See <see cref="TypeExtensions.IsSimpleType(Type)"/> for more information about what's considered a simple type. 
+         *  </summary>
+         *  <param name="instance">The instance to validate recursively.</param>
+         *  <param name="validateAllProperties">Whether to validate all properties (true) or just the ones who are [Required] (false).</param>
          */
         List<ValidationResult> ValidateObjectRecursively(object instance, bool validateAllProperties = true);
     }
