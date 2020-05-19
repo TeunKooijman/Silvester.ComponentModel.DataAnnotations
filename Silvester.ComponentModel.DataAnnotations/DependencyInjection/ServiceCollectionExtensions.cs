@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Text.Json;
 
 namespace Silvester.ComponentModel.DataAnnotations.DependencyInjection
 {
@@ -13,7 +12,7 @@ namespace Silvester.ComponentModel.DataAnnotations.DependencyInjection
                 return null;
             }
 
-            services.AddRecursiveValidator((options, services) => 
+            services.AddRecursiveValidator((options, provider) => 
             {
                 if(configureAction != null)
                 {
