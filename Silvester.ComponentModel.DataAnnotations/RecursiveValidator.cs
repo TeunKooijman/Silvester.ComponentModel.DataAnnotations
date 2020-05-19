@@ -70,7 +70,7 @@ namespace Silvester.ComponentModel.DataAnnotations
 
             foreach (PropertyInfo property in type.GetProperties().Where(e => e.CanRead))
             {
-                if (property.PropertyType.IsSimpleType())
+                if (property.PropertyType.IsSimpleType() || property.PropertyType == typeof(Type) || typeof(Delegate).IsAssignableFrom(property.PropertyType))
                 {
                     continue;
                 }
